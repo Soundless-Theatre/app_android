@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <color name="Material.Gray.800">#424242</color>
+    <color name="Material.Cyan.A200">#18FFFF</color>
+
+    <style name="AppTheme" parent="android:Theme.Material">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/Material.Cyan.A200</item>
+        <item name="android:navigationBarColor">@color/Material.Gray.800</item>
+
+    </style>
+
+</resources>

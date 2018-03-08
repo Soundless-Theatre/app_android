@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.theatre.soundless.soundless_theatre.SoundlessTheatre">
+
+    <GridLayout
+        android:layout_width="389dp"
+        android:layout_height="511dp"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="設定"
+            android:textColor="#3a4b73"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="88dp">
+
+            <TextView
+                android:id="@+id/textVieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soundless-Theatre"
+                android:textColor="#98314663"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/headphone" />
+        </LinearLayout>
+
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>

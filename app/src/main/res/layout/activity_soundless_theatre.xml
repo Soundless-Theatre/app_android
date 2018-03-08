@@ -34,11 +34,6 @@
                 android:textColor="#98314663"
                 android:textSize="20dp" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                app:srcCompat="@drawable/headphone" />
         </LinearLayout>
 
     </GridLayout>

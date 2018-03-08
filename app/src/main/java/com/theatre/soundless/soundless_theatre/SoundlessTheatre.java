@@ -54,6 +54,9 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
 
     private TextView info;
 
+    //http://192.168.から/~までの間を記入
+    private String url ="1.78:5000";
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +71,7 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
                 String result = null;
                 // リクエストオブジェクトを作って
                 Request request = new Request.Builder()
-                        .url("http://192.168.1.78:5000/list")
+                        .url("http://192.168."+url+"/list")
                         .get()
                         .build();
                 // クライアントオブジェクトを作って
@@ -111,12 +114,8 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
                         JSONObject datas = new JSONObject(result);
                         LinearLayout layout = (LinearLayout) findViewById(R.id.wifilayout);
                          for (int count = 0; count < datas.length(); count++) {
-                             Log.d("count", String.valueOf(count));
                              String power = datas.getJSONObject(String.valueOf(count)).getString("POWER");
                              String ssid = datas.getJSONObject(String.valueOf(count)).getString("SSID");
-                             Log.d("power:", power);
-                             Log.d("ssid:", ssid);
-
                              View view = getLayoutInflater().inflate(R.layout.wifi,null);
                              layout.addView(view);
                              Button but = (Button) view.findViewById(R.id.buttoncon);
@@ -146,9 +145,6 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
         }.execute();
     }
 
-
-
-
     @Override
     public void onClick(View view) {
 
@@ -162,7 +158,7 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
         new AlertDialog.Builder(SoundlessTheatre.this)
                 .setTitle("パスワードを入力してください")
                 .setView(view1)
-                .setPositiveButton("確定", new DialogInterface.OnClickListener() {
+                .setPositiveButton("connect", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         final String gettext = etsb1.getText().toString();
@@ -183,7 +179,7 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
 
                                 // リクエストオブジェクトを作って
                                 Request request = new Request.Builder()
-                                        .url("http://192.168.1.78:5000/connect_app")
+                                        .url("http://192.168."+url+"/connect_app")
                                         .post(requestBody)
                                         .build();
 
@@ -204,7 +200,7 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
                         }.execute();
                     }
                 })
-                .setNegativeButton("戻る", new DialogInterface.OnClickListener() {
+                .setNegativeButton("back", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }

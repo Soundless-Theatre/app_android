@@ -34,9 +34,6 @@ import static android.view.View.*;
 
 public class SoundlessTheatre extends AppCompatActivity implements OnClickListener{
 
-    String TAG = "checkLog";
-
-
     private Button btn1;
     private Button btn2;
     private Button btn3;
@@ -82,7 +79,6 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
                     result = response.body().string();
                 } catch (IOException e) {
                     e.printStackTrace();
-                    Log.d(TAG,"null");
                 }
                 // 返す
                 return result;
@@ -170,7 +166,6 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         final String gettext = etsb1.getText().toString();
-                        Log.d(TAG,gettext);
 
                         //post
 
@@ -183,7 +178,6 @@ public class SoundlessTheatre extends AppCompatActivity implements OnClickListen
 
                                 String message = finalId + " " + gettext;
 
-                                Log.d(TAG,message);
 
                                 RequestBody requestBody = RequestBody.create(JSON,message);
 

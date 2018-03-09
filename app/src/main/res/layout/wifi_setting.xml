@@ -27,7 +27,8 @@
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="ネットワークを選択..."
-                android:textSize="15sp" />
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColorHint="@color/Material.Cyan.100" />
 
         </LinearLayout>
     </LinearLayout>

@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <color name="Material.Gray.800">#424242</color>
     <color name="Material.Cyan.A200">#18FFFF</color>
+    <color name="Material.Cyan.100">#B2EBF2</color>
 
     <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
